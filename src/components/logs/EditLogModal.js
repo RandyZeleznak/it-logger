@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import M from 'materialize-css/dist/js/materialize';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 const EditLogModal = () => {
   const [message, setMessage] = useState('');
