@@ -55,7 +55,7 @@ export const addLog = log => async dispatch => {
   } catch (err) {
     dispatch({
       type: LOGS_ERROR,
-      payload: err.response.data
+      payload: err.response.statusText
     });
   }
 };
