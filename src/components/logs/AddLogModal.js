@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import TechSelectOptions from '../techs/TechSelectOptions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addLog } from '../../actions/logActions';
@@ -11,7 +12,7 @@ const AddLogModal = ({ addLog }) => {
 
   const onSubmit = () => {
     if (message === '' || tech === '') {
-      M.toast({ html: 'Please enter  a message and Tech' });
+      M.toast({ html: 'Please enter a message and tech' });
     } else {
       const newLog = {
         message,
@@ -24,7 +25,7 @@ const AddLogModal = ({ addLog }) => {
 
       M.toast({ html: `Log added by ${tech}` });
 
-      //Clear fields
+      // Clear Fields
       setMessage('');
       setTech('');
       setAttention(false);
@@ -36,7 +37,7 @@ const AddLogModal = ({ addLog }) => {
       <div className="modal-content">
         <h4>Enter System Log</h4>
         <div className="row">
-          <div classname="input-field">
+          <div className="input-field">
             <input
               type="text"
               name="message"
@@ -48,6 +49,7 @@ const AddLogModal = ({ addLog }) => {
             </label>
           </div>
         </div>
+
         <div className="row">
           <div className="input-field">
             <select
@@ -59,12 +61,11 @@ const AddLogModal = ({ addLog }) => {
               <option value="" disabled>
                 Select Technician
               </option>
-              <option value="John Doe">John Doe</option>
-              <option value="Sam Smith">Sam Smith</option>
-              <option value="Sara Wilson">Sara Wilson</option>
+              <TechSelectOptions />
             </select>
           </div>
         </div>
+
         <div className="row">
           <div className="input-field">
             <p>

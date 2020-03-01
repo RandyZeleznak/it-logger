@@ -9,10 +9,10 @@
     },
     {
       "id": 2,
-      "message": "Workstation 007 not posting",
-      "attention": true,
-      "date": "03-02-2019",
-      "tech": "Joe Doe"
+      "message": "Workstation 007 fixed and is now posting",
+      "attention": false,
+      "tech": "Sara Wilson",
+      "date": "2020-02-29T23:16:56.889Z"
     },
     {
       "id": 3,
@@ -20,6 +20,13 @@
       "attention": false,
       "date": "03-02-2019",
       "tech": "Sara Wilson"
+    },
+    {
+      "message": "Testing 123",
+      "attention": true,
+      "tech": "Sara Wilson",
+      "date": "2020-02-29T14:36:05.304Z",
+      "id": 4
     }
   ],
   "techs": [
